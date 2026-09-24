@@ -232,6 +232,4 @@ Excel | MySQL | Power BI | Financial Analysis
 
 ## Connect
 
-LinkedIn: ## Connect
-
 LinkedIn: https://www.linkedin.com/in/aderonke-ojedokun/
