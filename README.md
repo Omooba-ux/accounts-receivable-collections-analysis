@@ -14,7 +14,7 @@ This project analyses Accounts Receivable performance to understand invoice paym
 
 Using invoice and customer data, I developed an end-to-end analytics solution that moves from data preparation to business reporting:
 
-**Excel → MySQL/SQL → Power BI**
+**Excel → MySQL → Power BI**
 
 The objective was to transform raw financial data into insights that could support better collection decisions and improve visibility into receivables performance.
 
