@@ -149,9 +149,9 @@ The final dashboard presents:
 
 Some of the analysis findings include:
 
-- Total invoice value analysed: **₦15.54M**
-- Outstanding receivables identified: **₦1.56M**
-- Seriously late exposure identified: **₦2.32M**
+- Total invoice value analysed: **$15.54M**
+- Outstanding receivables identified: **$1.56M**
+- Seriously late exposure identified: **$2.32M**
 - Significant exposure was concentrated within older ageing categories
 
 ---
@@ -187,4 +187,4 @@ Based on the analysis:
 Accounting Graduate | Data Analytics Portfolio
 
 Skills:
-Excel | SQL | MySQL | Power BI | Financial Analysis
+Excel | MySQL | Power BI | Financial Analysis
