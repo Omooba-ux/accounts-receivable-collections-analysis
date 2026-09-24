@@ -19,7 +19,7 @@ The goal was to transform raw financial transaction data into meaningful insight
 
 The project follows an end-to-end analytics workflow:
 
-**Excel → MySQL/SQL → Power BI → Business Insights**
+**Excel → MySQL → Power BI → Business Insights**
 
 ---
 
