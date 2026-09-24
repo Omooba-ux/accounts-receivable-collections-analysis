@@ -62,7 +62,7 @@ Contains:
 | Metric | Value |
 |---|---|
 | Total Invoice Records | 4,506 |
-| Total Invoice Value | ₦15.54M |
+| Total Invoice Value | $15.54M |
 | Customers Analysed | 100 |
 | Analysis Area | Accounts Receivable & Collections |
 
