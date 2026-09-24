@@ -229,3 +229,9 @@ Excel | MySQL | Power BI | Financial Analysis
 | Power BI | Dashboard development and reporting |
 
 ---
+
+## Connect
+
+LinkedIn: ## Connect
+
+LinkedIn: https://www.linkedin.com/in/aderonke-ojedokun/
