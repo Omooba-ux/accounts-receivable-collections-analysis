@@ -1,5 +1,11 @@
 # Accounts Receivable & Collections Analytics
 
+![Executive Dashboard](screenshots/executive_overview_dashboard.png)
+
+An end-to-end finance analytics project analysing invoice performance, payment behaviour, receivables ageing, and customer exposure using Excel, SQL, MySQL, and Power BI.
+
+# Accounts Receivable & Collections Analytics
+
 ## Project Overview
 
 Revenue does not always translate into cash flow.
@@ -188,3 +194,38 @@ Accounting Graduate | Data Analytics Portfolio
 
 Skills:
 Excel | MySQL | Power BI | Financial Analysis
+
+---
+
+# Project Navigation
+
+| Section | Description |
+|---|---|
+| Dataset | Dataset structure and field documentation |
+| Excel | Data preparation and initial analysis |
+| SQL | Database setup, validation, and financial analysis queries |
+| Power BI | Interactive dashboard development |
+| Insights | Business findings and recommendations |
+
+---
+
+# Key Project Highlights
+
+📌 Analysed **4,506 invoice records**  
+📌 Evaluated **$15.54M total invoice value**  
+📌 Identified receivables exposure and ageing risks  
+📌 Built customer risk segmentation analysis  
+📌 Developed an interactive Power BI dashboard  
+
+---
+
+# Tools Used
+
+| Tool | Purpose |
+|---|---|
+| Excel | Data preparation and exploratory analysis |
+| MySQL | Database management and SQL analysis |
+| SQL | Financial analysis and validation |
+| Power BI | Dashboard development and reporting |
+
+---
