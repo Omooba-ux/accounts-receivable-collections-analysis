@@ -2,7 +2,7 @@
 
 ![Executive Dashboard](screenshots/executive_overview_dashboard.png)
 
-An end-to-end finance analytics project analysing invoice performance, payment behaviour, receivables ageing, and customer exposure using Excel, SQL, MySQL, and Power BI.
+An end-to-end finance analytics project analysing invoice performance, payment behaviour, receivables ageing, and customer exposure using Excel, MySQL, and Power BI.
 
 # Accounts Receivable & Collections Analytics
 
