@@ -88,7 +88,7 @@ Skills demonstrated:
 
 ---
 
-## MySQL / SQL
+## MySQL 
 
 Skills demonstrated:
 
