@@ -2,108 +2,98 @@
 
 ## Overview
 
-This project uses Accounts Receivable data consisting of invoice transactions and customer information.
+This project uses an Accounts Receivable dataset designed to simulate a company's invoice and customer payment environment.
 
-The dataset was designed to analyse customer payment behaviour, outstanding receivables, ageing patterns, and collection risk.
+The dataset represents a typical finance workflow where businesses issue invoices to customers, monitor payment activity, and track outstanding receivables.
 
-The data consists of two main tables:
+The purpose of analysing this dataset is to understand customer payment behaviour, identify receivables ageing risks, measure outstanding balances, and determine where collection efforts should be prioritised.
+
+The dataset consists of two connected tables:
 
 1. Invoice Data
 2. Customer Data
 
----
-
 # Invoice Dataset
 
-The invoice dataset contains transactional information related to customer invoices, payments, and receivables status.
+The Invoice dataset represents transactional billing activity.
 
-## Fields
-
-| Field | Description |
-|---|---|
-| Invoice_ID | Unique identifier assigned to each invoice |
-| Customer_ID | Unique identifier linking invoices to customers |
-| Invoice_Date | Date the invoice was issued |
-| Due_Date | Date payment was expected |
-| Paid_Date | Date payment was received |
-| Invoice_Value | Monetary value of the invoice |
-| Invoice_Status | Payment status classification |
-| Days_Late | Number of days payment exceeded the due date |
-| Payment_Terms | Agreed payment period |
-| Region | Customer location category |
-| Industry | Customer industry classification |
-| Customer_Size | Customer segment classification |
-
----
+Each row represents an individual invoice issued to a customer. The table contains the financial and payment information required to analyse invoice performance, payment behaviour, outstanding receivables, and ageing risk.
 
 # Customer Dataset
 
-The customer dataset contains customer-level information used to analyse receivables exposure across different segments.
+The Customer dataset contains customer-level attributes that provide additional business context for invoice transactions.
 
-## Fields
-
-| Field | Description |
-|---|---|
-| Customer_ID | Unique identifier assigned to each customer |
-| Industry | Industry classification of the customer |
-| Customer_Size | Customer segment (SME, Mid-Size, Enterprise) |
-| Region | Geographic customer grouping |
+While the Invoice table explains the financial activity, the Customer table helps identify where receivables exposure is concentrated across different industries, customer sizes, and regions.
 
 ---
 
-# Data Preparation
+# Relationship Between Tables
 
-Before analysis, the dataset was reviewed and prepared to ensure accuracy and reliability.
+The Invoice and Customer datasets were connected using the `Customer_ID` field.
 
-Preparation activities included:
+This relationship allowed invoice-level financial information to be analysed alongside customer-level characteristics.
 
-- Reviewing table structures
-- Validating financial fields
-- Checking payment information
-- Reviewing missing values
-- Creating analytical categories for reporting
-- Preparing data for SQL analysis and Power BI visualisation
+By combining both tables, the analysis was able to answer questions such as:
 
----
+- Which customers contribute the highest outstanding balances?
+- Which industries have greater receivables exposure?
+- How does payment behaviour differ across customer segments?
 
-# Business Use Cases
+The relationship between these tables transformed the analysis from simply measuring unpaid invoices into understanding the business factors contributing to receivables risk.
 
-The dataset supports analysis of:
+# Data Quality Assessment & Validation
 
-## Receivables Performance
+Before analysis, the dataset was reviewed to ensure accuracy, consistency, and suitability for financial analysis.
 
-Understanding:
+The validation process focused on identifying issues that could affect receivables calculations and reporting accuracy.
 
-- Total invoice value
-- Outstanding balances
-- Payment behaviour
-- Collection performance
+## Missing Value Checks
 
-## Ageing Analysis
+Missing values were reviewed across key fields including:
 
-Evaluating:
+- Paid_Date
+- Days_Late
+- Customer_ID
+- Invoice-related fields
 
-- Recently overdue invoices
-- Long outstanding balances
-- Collection priority areas
+The purpose was to determine whether missing values represented data quality issues or valid unavailable information.
 
-## Customer Risk Analysis
+## Days_Late Handling
 
-Identifying:
+The Days_Late field was reviewed because missing values could affect payment delay analysis.
 
-- High-exposure customers
-- Industry concentration
-- Customer segments contributing to receivables risk
+Blank Days_Late values were investigated alongside payment information to determine whether payment delays could be calculated.
 
----
+Where payment completion information was unavailable, Days_Late values were retained as unavailable rather than replaced with zero.
 
-# Data Limitations
+This prevented unpaid invoices from being incorrectly classified as invoices paid on time.
 
-The dataset represents a structured analytical environment and may not include all operational factors that influence collections, such as:
+## Duplicate Checks
 
-- Customer communication history
-- Contract terms
-- Dispute reasons
-- External economic conditions
+Duplicate checks were performed to ensure that:
 
-The analysis focuses on identifying patterns within available invoice and customer information.
+- Invoice records represented unique transactions
+- Duplicate entries did not inflate financial calculations
+- Customer records remained consistent
+
+## Date Consistency Checks
+
+Date fields were reviewed to ensure logical relationships between:
+
+- Invoice_Date
+- Due_Date
+- Paid_Date
+
+These checks supported accurate calculations for:
+
+- Payment delays
+- Ageing categories
+- Collection analysis
+
+## Relationship Validation
+
+The connection between Invoice and Customer tables was checked to ensure:
+
+- Invoice records contained valid Customer_ID values
+- Customer information could be correctly linked
+- Customer segmentation analysis could be performed reliably
